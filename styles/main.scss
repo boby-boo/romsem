@@ -1,0 +1,28 @@
+
+@import 'reset';
+@import 'fonts';
+@import 'general';
+@import 'primary-card';
+@import 'aside';
+@import 'header';
+@import 'footer';
+@import 'basket-and-map';
+@import 'main-slider';
+@import 'about';
+@import 'submenu';
+@import 'news-slider';
+@import 'catalog';
+@import 'card-product';
+@import 'media';
+
+// select {
+//     display: none;
+// }
+.div-select__list {
+    max-height: 0;
+    overflow: hidden;
+    transition: .7s;
+}
+.active {
+    max-height: 100px;
+}

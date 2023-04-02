@@ -1,0 +1,65 @@
+.about {
+    .about__row {
+        max-width: 980px;
+        position: relative;
+        padding: 10px 15px 60px;
+        margin: 0 auto;
+        @include font(18px, 400, 1.0, $grayColor);
+
+        .about__description {
+            position: relative;
+            margin-bottom: 42px;
+            height: 262px;    
+            overflow: hidden;
+            h2 {
+                margin-bottom: 10px;
+                @include font(24px, 700, 1.0, inherit);
+            }
+            p {
+                margin-bottom: 10px;
+            }
+            ul {
+                margin-bottom: 10px;
+                span {
+                    display: inline-block;
+                    margin-bottom: 10px;
+                }
+            }
+            li {
+                margin-left: 30px;
+                list-style: disc;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                height: 80px;
+                width: 100%;
+                background: linear-gradient(transparent, $lightgray);
+                bottom: 0;
+                left: 0;
+                z-index: 12;
+            }
+        }
+        .about__row-button {
+            margin: 0 auto;
+            background: none;
+            @include font(24px, 400, 1.0, $primaryColor);
+            @extend %tplFlex;
+            gap: 10px;
+            transition: $transitionColor;
+            z-index: 99;
+            &:hover {
+                color: transparentize($primaryColor, 0.2);
+            }
+        }
+        .about__description-active {
+            height: auto;
+            overflow: visible;
+        }
+    }
+}
+.about__description-active .about__description {
+    .about__description:after {
+        width: 0;
+    }
+}

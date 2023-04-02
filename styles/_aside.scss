@@ -1,0 +1,52 @@
+.aside {
+    position: fixed;
+    top: 26px;
+    left: 100px;
+    width: 220px;
+    padding: 0 23px;
+    .aside__logo {
+        display: block;
+        margin-bottom: 31px;
+        max-width: 180px;
+        padding-bottom: 30px;
+        text-align: center;
+        border-bottom: 0.5px solid $grayColor;
+    }
+    .aside__row {
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        li {
+            a {
+                display: block;
+                padding: 10px 0 10px 50px;
+                @include font(24px, 400, 1.0, $mainColor);
+                transition: $transitionColor;
+                &:hover {
+                    color: $hoverColor;
+                }
+            }
+        }
+    }
+}
+.new-category {
+    position: relative;
+    &:after {
+        content: 'скоро';
+        position: absolute;
+        top: -5px;
+        right: -14px;
+        padding: 4px 8px;
+        @include font(11px, 400, 1.0, #fff);
+        text-transform: uppercase;
+        border-radius: 10px;
+        background-color: #eb5757;
+    }
+}
+
+@each $item in item_1, item_2, item_3, item_4, item_5, item_6, item_7, item_8, item_9, item_10 {
+    .bg__#{$item} {
+        background: url(../src/aside/#{$item}.svg) no-repeat left center;
+    }
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card product</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <aside class="aside">
+        <a href="index.html" class="aside__logo">
+            <img src="./src/aside/logo.png" alt="logo">
+        </a>
+        <ul id="aside__row" class="aside__row">
+            <li class="bg__item_1"><a href="#" data-category="Пицца">Пицца</a></li>
+            <li class="bg__item_2"><a href="#" data-category="Сеты">Сеты</a></li>
+            <!-- <li class="bg__item_2"><a href="#" data-category="jewelery">Сеты</a></li> -->
+            <li class="bg__item_3"><a href="#" data-category="WOK">WOK</a></li>
+            <li class="bg__item_4"><a href="#" data-category="Роллы">Роллы</a></li>
+            <!-- <li class="bg__item_1"><a href="#" data-category="pizza">Пицца</a></li>
+            <li class="bg__item_2"><a href="#" data-category="sets">Сеты</a></li>
+            <li class="bg__item_3"><a href="#" data-category="wok">WOK</a></li>
+            <li class="bg__item_4"><a href="#" data-category="rolls">Роллы</a></li>
+            <li class="bg__item_5"><a href="#" data-category="sushi">Суши</a></li>
+            <li class="bg__item_6 new-category"><a href="#" data-category="salads">Салаты</a></li>
+            <li class="bg__item_7 new-category"><a href="#" data-category="soups">Супы</a></li>
+            <li class="bg__item_8"><a href="#" data-category="corn-dogs">Корн доги</a></li>
+            <li class="bg__item_9"><a href="#" data-category="beverages">Напитки</a></li>
+            <li class="bg__item_10"><a href="#" data-category="sales">Акции</a></li> -->
+        </ul>
+    </aside>
+    <section class="inner">
+        <header class="header">
+            <div class="container">
+                <div class="header__row">
+                    <a href="/" class="logo__mobile">
+                        <img src="./src/header/logo-mobile.svg" alt="logo">
+                    </a>
+                    <div class="header__info">
+                        <ul class="header__info-contacts">
+                            <h2>Наш телефон</h2>
+                            <li><a href="tel:996705188955">+996 705 188 955</a></li>
+                            <li><a href="tel:996555188955">+996 555 188 955</a></li>
+                        </ul>
+                        <div class="header__info-work">
+                            <img src="./src/header/watch.svg" alt="watch icon">работаем с 10:00 до 00:00</div>
+                    </div>
+                    <div class="header__mobile-search header__search-search">
+                        <img src="./src/header/search-mobile.svg" alt="searh icon">
+                    </div>
+                    <div class="header__search">
+                        <div class="header__city">
+                            <h3>Город:</h3><span class="header__city-city">Бишкек</span>
+                        </div>
+                        <div class="header__description">
+                            <a href="#">Отзывы</a>
+                            <a href="#">Доставка и оплата</a>
+                            <span class="header__search-search"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </section>
+    <div class="basket-and-map">
+        <div class="basket__card">
+            <h2 class="basket-and-map__title">Ваша корзина пуста.</h2>
+            <p>Добавьте же скорее что-нибудь!</p>
+            <span>Бесплатная доставка от 800 СОМ</span>
+        </div>
+        <div class="map__card">
+            <div class="map__location">
+                <img src="./src/basket-and-map/map.jpg" alt="map">
+            </div>
+            <div class="map__adress">
+                <!-- <label class="basket-and-map__title" for="map__adress_input">Укажите адрес</label>
+                <input type="text" id="map__adress_input"></input> -->
+                <h2 class="basket-and-map__title">Укажите адрес</h2>
+                <p>И узнайте время доставки</p>
+            </div>
+        </div>
+    </div>
+    <section class="product-info">
+        <div class="container">
+            <div class="product-info__btns">
+                <button class="product-info__btn-previous">Назад</button>
+                <button class="product-info__btn-next">Вперед</button>
+            </div>
+            <div id="product-info__row" class="product-info__row">
+                <!-- <div class="product-info__card">
+                    <div class="product-info__image">
+                        <img src="./array/pizza/img-1.jpeg" alt="product-info image">
+                    </div>
+                    <div class="product-info__description">
+                        <h1>Филадельфия и лосось сет</h1>
+                        <span>290 грамм</span>
+                        <div class="product-info__order">
+                            <span>1130 COM</span>
+                            <div class="product-order__order">
+                                <button class="product-order__minus primery-btn__minus"></button>
+                                <span>10</span>
+                                <button class="product-order__plus primery-btn__plus"></button>
+                            </div>
+                        </div>
+                        <div class="product-info__info">
+                            <h3>Состав</h3>
+                            <p>Лосось, сыр "Филадельфия", огурец, авокадо</p>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__row">
+                <ul class="footer__about">
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Доставка и оплата</a></li>
+                    <li><a href="#">Лента материалов</a></li>
+                    <li><a href="#">Политика возврата</a></li>
+                </ul>
+                <div class="footer__social">
+                    <label for="footer__social-number">Введите номер</label>
+                    <input id="footer__social-number" class="footer__social-number" type="text" placeholder="+996 (__) ___ __ __"> 
+                    <span>Выберите удобный мессенджер для общения</span>
+                    <ul class="footer__social-row">
+                        <li><a href="https://www.whatsapp.com/" target="_blank"><img src="./src/footer/whatsapp.svg" alt="whatsapp"></a></li>
+                        <li><a href="https://web.telegram.org/k/" target="_blank"><img src="./src/footer/telegram.svg" alt="telegram"></a></li>
+                        <li><a href="https://www.instagram.com/" target="_blank"><img src="./src/footer/instagram.svg" alt="instagram"></a></li>
+                    </ul>
+                </div>
+                <address class="footer__contacts">
+                    <a href="tel:996705188955">Тел:<span>+996 705 188 955</span></a>
+                    <a href="tel:996555188955">Тел:<span>+996 555 188 955</span></a>
+                    <span>Адрес:Бакаева 126</span>
+                </address>
+            </div>
+            <div class="footer-mobile__row">
+                <ul class="footer-mobile__list">
+                    <li><a href="#"><img src="./src/footer/footer-icon_1.svg" alt="menu">Меню</a></li>
+                    <li><a href="#"><img src="./src/footer/footer-icon_2.svg" alt="basket">Корзина</a></li>
+                    <li><a href="#"><img src="./src/footer/footer-icon_3.svg" alt="reviews">Отзывы</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="./scripts/card_product.js"></script>
+    <!-- <script src="./scripts/main.js"></script> -->
+</body>
+</html>

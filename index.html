@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <aside id="aside" class="aside">
+        <a href="/" class="aside__logo" >
+            <img src="./src/aside/logo.png" alt="logo">
+        </a>
+        <ul id="aside__row" class="aside__row">
+            <li class="bg__item_1"><a href="catalog.html" data-category="Пицца">Пицца</a></li>
+            <li class="bg__item_2"><a href="catalog.html" data-category="Сеты">Сеты</a></li>
+            <li class="bg__item_3"><a href="catalog.html" data-category="WOK">WOK</a></li>
+            <li class="bg__item_4"><a href="catalog.html" data-category="Роллы">Роллы</a></li>
+            <li class="bg__item_5" data-category="sushi"><a href="catalog.html">Суши</a></li>
+            <li class="bg__item_6 new-category" data-category="salads"><a href="catalog.html">Салаты</a></li>
+            <li class="bg__item_7 new-category" data-category="soups"><a href="catalog.html">Супы</a></li>
+            <li class="bg__item_8" data-category="corn-dogs"><a href="catalog.html">Корн доги</a></li>
+            <li class="bg__item_9" data-category="beverages"><a href="catalog.html">Напитки</a></li>
+            <li class="bg__item_10" data-category="sales"><a href="catalog.html">Акции</a></li>
+        </ul>
+    </aside>
+    <section class="inner">
+        <header class="header">
+            <div class="container">
+                <div class="header__row">
+                    <a href="/" class="logo__mobile">
+                        <img src="./src/header/logo-mobile.svg" alt="logo">
+                    </a>
+                    <div class="header__info">
+                        <ul class="header__info-contacts">
+                            <h2>Наш телефон</h2>
+                            <li><a href="tel:996705188955">+996 705 188 955</a></li>
+                            <li><a href="tel:996555188955">+996 555 188 955</a></li>
+                        </ul>
+                        <div class="header__info-work">
+                            <img src="./src/header/watch.svg" alt="watch icon">работаем с 10:00 до 00:00</div>
+                    </div>
+                    <div class="header__mobile-search header__search-search">
+                        <img src="./src/header/search-mobile.svg" alt="searh icon">
+                    </div>
+                    <div class="header__search">
+                        <div class="header__city">
+                            <h3>Город:</h3><span class="header__city-city">Бишкек</span>
+                        </div>
+                        <div class="header__description">
+                            <a href="#">Отзывы</a>
+                            <a href="#">Доставка и оплата</a>
+                            <span class="header__search-search"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </section>
+    <div class="basket-and-map">
+        <div class="basket__card">
+            <h2 class="basket-and-map__title">Ваша корзина пуста.</h2>
+            <p>Добавьте же скорее что-нибудь!</p>
+            <span>Бесплатная доставка от 800 СОМ</span>
+        </div>
+        <div class="map__card">
+            <div class="map__location">
+                <img src="./src/basket-and-map/map.jpg" alt="map">
+            </div>
+            <div class="map__adress">
+                <!-- <label class="basket-and-map__title" for="map__adress_input">Укажите адрес</label>
+                <input type="text" id="map__adress_input"></input> -->
+                <h2 class="basket-and-map__title">Укажите адрес</h2>
+                <p>И узнайте время доставки</p>
+            </div>
+        </div>
+    </div>
+    <main>
+        <section class="main-slider">
+            <div class="container">
+                <div class="main-slider__inner">
+                    <div class="main-slider_slider">
+                        <img src="./src/main-slider/main.jpg" alt="main slider">
+                    </div>
+                    <div class="buttons">
+                        <button class="main-slider__button"></button>
+                        <button class="main-slider__button"></button>
+                        <button class="main-slider__button"></button>
+                        <button class="main-slider__button"></button>
+                        <button class="main-slider__button"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="submenu">
+            <div class="container">
+                <div class="submenu__row">
+                    <a href="#" class="submenu__card">
+                        <img src="./src/submenu/submenu__img-1.jpg" alt="image submenu card">
+                        <span>Чикен</span>
+                    </a>
+                    <a href="#" class="submenu__card">
+                        <img src="./src/submenu/submenu__img-2.jpg" alt="image submenu card">
+                        <span>С угрем</span>
+                    </a>
+                    <a href="#" class="submenu__card">
+                        <img src="./src/submenu/submenu__img-3.jpg" alt="image submenu card">
+                        <span>Корн дог</span>
+                    </a>
+                    <a href="#" class="submenu__card">
+                        <img src="./src/submenu/submenu__img-4.jpg" alt="image submenu card">
+                        <span>Пицца</span>
+                    </a>
+                    <a href="#" class="submenu__card">
+                        <img src="./src/submenu/submenu__img-5.jpg" alt="image submenu card">
+                        <span>Акции</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="news-slider">
+            <div class="container">
+                <div class="news-slider__info">
+                    <h2>Новинки</h2>
+                    <span>Популярное</span>
+                </div>
+                <div class="news-slider__inner primary-slider__inner">
+                    <button class="news-slider__previous-btn primary-slider__btn primary-slider__btn-previous-btn"></button>
+                    <div class="news-slider__row">
+
+                        <a href="#" target="_blank" class="news-slider__card primary-card">
+                            <div class="news-slider__card-img primary-card__img">
+                                <img src="./src/news-slider/news-slider__img-1.jpg" alt="news slider image">
+                            </div>
+                            <div class="news-slider__card-content primary-card__content">
+                                <div class="news-slider__card-description primary-card__description">
+                                    <h3>Саломон сет</h3>
+                                    <p>1050 грамм, 30 кусочков</p>
+                                </div>
+                                <div class="catalog-card__price primary-card__price">
+                                    <span>1500 COM</span>
+                                    <button class="primary-btn">Хочу!</button>
+                                </div>
+                            </div>
+                        </a>`;
+                        <a href="#" target="_blank" class="news-slider__card primary-card">
+                            <div class="news-slider__card-img primary-card__img">
+                                <img src="./src/news-slider/news-slider__img-2.jpg" alt="news slider image">
+                            </div>
+                            <div class="news-slider__card-content primary-card__content">
+                                <div class="news-slider__card-description primary-card__description">
+                                    <h3>Филадельфия и лосось сет</h3>
+                                    <p>1260 грамм, 36 кусочков</p>
+                                </div>
+                                <div class="catalog-card__price primary-card__price">
+                                    <span>1500 COM</span>
+                                    <button class="primary-btn">Хочу!</button>
+                                </div>
+                            </div>
+                        </a>`;
+                        <a href="#" target="_blank" class="news-slider__card primary-card">
+                            <div class="news-slider__card-img primary-card__img">
+                                <img src="./src/news-slider/news-slider__img-2.jpg" alt="news slider image">
+                            </div>
+                            <div class="news-slider__card-content primary-card__content">
+                                <div class="news-slider__card-description primary-card__description">
+                                    <h3>Самая большая Филадельфия</h3>
+                                    <p>2050 грамм, 45 кусочков</p>
+                                </div>
+                                <div class="catalog-card__price primary-card__price">
+                                    <span>2100 COM</span>
+                                    <button class="primary-btn">Хочу!</button>
+                                </div>
+                            </div>
+                        </a>`;
+
+<!-- 
+                        <a class="news-slider__card primary-card" href="#">
+                            <div class="news-slider__card-description primary-card__description">
+                                <div class="news-slider__card-description-img primary-card__description-img">
+                                    <img src="./src/news-slider/news-slider__img-1.jpg" alt="news slider image">
+                                </div>
+                                <h3>Саломон сет</h3>
+                                <p>1050 грамм, 30 кусочков</p>
+                            </div>
+                            <div class="news-slider__card-price primary-card__price">
+                                <span>1500 COM</span>
+                                <button class="primary-btn">Хочу!</button>
+                            </div>
+                        </a> -->
+                        <!-- <a class="news-slider__card primary-card" href="#">
+                            <div class="news-slider__card-description primary-card__description">
+                                <div class="news-slider__card-description-img primary-card__description-img">
+                                    <img src="./src/news-slider/news-slider__img-2.jpg" alt="news slider image">
+                                </div>
+                                <h3>Филадельфия и лосось сет</h3>
+                                <p>1260 грамм, 36 кусочков</p>
+                            </div>
+                            <div class="news-slider__card-price primary-card__price">
+                                <span>1500 COM</span>
+                                <button class="primary-btn">Хочу!</button>
+                            </div>
+                        </a> -->
+                        <!-- <a class="news-slider__card primary-card" href="#">
+                            <div class="news-slider__card-description primary-card__description">
+                                <div class="news-slider__card-description-img primary-card__description-img">
+                                    <img src="./src/news-slider/news-slider__img-3.jpg" alt="news slider image">
+                                </div>
+                                <h3>Самая большая Филадельфия</h3>
+                                <p>2050 грамм, 45 кусочков</p>
+                            </div>
+                            <div class="news-slider__card-price primary-card__price">
+                                <span>2100 СОМ</span>
+                                <button class="primary-btn">Хочу!</button>
+                            </div>
+                        </a> -->
+                    </div>
+                    <button class="news-slider__next-btn primary-slider__btn primary-slider__btn-next-btn"></button>
+                </div>
+            </div>
+        </section>
+        <article class="about">
+            <div class="container">
+                <div id="about__row"class="about__row">
+                    <div id="about__description" class="about__description about__description-hidden">
+                        <h2>Заказать суши в Бишкеке</h2>
+                        <p>Ресторан “Суши и Лапша” предлагаем своим клиентам самые вкусные суши с доставкой на дом, приготовленные по классическим и адаптированным к европейской аудитории рецептам, а также собственным наработкам наших поваров. Мы ценим время наших клиентов, поэтому вы можете заказать суши в Харькове с доставкой на дом или в офис.</p>
+                        <ul> <span>В нашем меню более 20 видов суши:</span>
+                            <li>Классические с сырым лососем, тунцом, окунем.</li>
+                            <li>Экзотические с тигровой креветкой, морским гребешком.</li>
+                            <li>Пикантные с копченым лососем, угрем.</li>
+                        </ul>
+                        <p>В меню также представлены гунканы: с начинкой из красной икры и тобико, а также феликсы, где японский майонез сочетается с рыбой, морепродуктами, угрем. Любители острых блюд могут купить суши с соусом спайси. Популярные начинки — копченая курица, снежный краб, креветки, гребешки, тунец, лосось и окунь.</p>
+                        <p>Ресторан “Суши и Лапша” предлагаем своим клиентам самые вкусные суши с доставкой на дом, приготовленные по классическим и адаптированным к европейской аудитории рецептам, а также собственным наработкам наших поваров. Мы ценим время наших клиентов, поэтому вы можете заказать суши в Харькове с доставкой на дом или в офис.</p>
+                        <ul> <span>В нашем меню более 20 видов суши:</span>
+                            <li>Классические с сырым лососем, тунцом, окунем.</li>
+                            <li>Экзотические с тигровой креветкой, морским гребешком.</li>
+                            <li>Пикантные с копченым лососем, угрем.</li>
+                        </ul>
+                        <p>В меню также представлены гунканы: с начинкой из красной икры и тобико, а также феликсы, где японский майонез сочетается с рыбой, морепродуктами, угрем. Любители острых блюд могут купить суши с соусом спайси. Популярные начинки — копченая курица, снежный краб, креветки, гребешки, тунец, лосось и окунь.</p>
+
+                    </div>
+                    <button id="about__row-button" class="about__row-button">Подробнее
+                        <img src="./src/about/about__arrow.svg" alt="arrow down">
+                    </button>
+                </div>
+            </div>
+        </article>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__row">
+                <ul class="footer__about">
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Доставка и оплата</a></li>
+                    <li><a href="#">Лента материалов</a></li>
+                    <li><a href="#">Политика возврата</a></li>
+                </ul>
+                <div class="footer__social">
+                    <label for="footer__social-number">Введите номер</label>
+                    <input id="footer__social-number" class="footer__social-number" type="text" placeholder="+996 (__) ___ __ __"> 
+                    <span>Выберите удобный мессенджер для общения</span>
+                    <ul class="footer__social-row">
+                        <li><a href="https://www.whatsapp.com/" target="_blank"><img src="./src/footer/whatsapp.svg" alt="whatsapp"></a></li>
+                        <li><a href="https://web.telegram.org/k/" target="_blank"><img src="./src/footer/telegram.svg" alt="telegram"></a></li>
+                        <li><a href="https://www.instagram.com/" target="_blank"><img src="./src/footer/instagram.svg" alt="instagram"></a></li>
+                    </ul>
+                </div>
+                <address class="footer__contacts">
+                    <a href="tel:996705188955">Тел:<span>+996 705 188 955</span></a>
+                    <a href="tel:996555188955">Тел:<span>+996 555 188 955</span></a>
+                    <span>Адрес:Бакаева 126</span>
+                </address>
+            </div>
+            <div class="footer-mobile__row">
+                <ul class="footer-mobile__list">
+                    <li><a href="#"><img src="./src/footer/footer-icon_1.svg" alt="menu">Меню</a></li>
+                    <li><a href="#"><img src="./src/footer/footer-icon_2.svg" alt="basket">Корзина</a></li>
+                    <li><a href="#"><img src="./src/footer/footer-icon_3.svg" alt="reviews">Отзывы</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="./scripts/main.js"></script>
+</body>
+</html>

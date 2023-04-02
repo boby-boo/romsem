@@ -1,0 +1,36 @@
+.catalog {
+    .catalog-inner {
+        padding-top: 30px;
+        background-color: #fff;
+        .catalog-name {
+            max-width: 965px;
+            padding: 0 10px;
+            margin: 0 auto;
+            @extend %tplFlex;
+            justify-content: flex-start;
+            column-gap: 20px;
+            .catalog-name__img {
+                width: 40px;
+                height: 40px;
+                img {
+                    @extend %tplOjectFit;
+                }
+            }
+            h1 {
+                // padding: 5px 0 0 53px;
+                @include font(36px, 400, 1.0, $mainColor);
+            }
+        }
+    }
+    .catalog__row {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 30px 15px 173px;
+        background-color: #fff;
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+}
