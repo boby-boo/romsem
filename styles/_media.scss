@@ -1,7 +1,29 @@
 @media(max-width: 1800px) {
     .aside,
     .basket-and-map {
-        // display: none;
+        display: none;
+    }
+}
+@media(max-width: 950px) {
+    .product-info {
+        .product-info__row {
+            padding: 0 15px;
+            border-radius: 15px;
+            .product-info__card {
+                padding: 20px 10px;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px 20px;
+                .product-info__image {
+                    max-width: 100%;
+                }
+                .product-info__description {
+                    padding-right: 0;
+                    max-width: 500px;
+                }
+            }
+        }
     }
 }
 @media(max-width: 880px) {
@@ -131,7 +153,6 @@
                 flex-direction: row;
                 justify-content: space-between;
                 max-width: 330px;
- 
                 column-gap: 15px;
                 border-radius: 10px;
                 background-color: #fff;
@@ -168,6 +189,43 @@
                     padding: 2px 25px;
                 }
                 
+            }
+        }
+    }
+    .product-info {
+        .product-info__row {
+            .product-info__card {
+                align-items: flex-start;
+                .product-info__image {
+                    margin-bottom: 10px;
+                }
+                .product-info__description {
+                    margin-bottom: 30px;
+                    display: grid;
+                    grid-template: 60px 60px / 1fr 1fr;
+                    grid-area: 10px;
+                    align-items: center;
+                    h1 {
+                        margin-bottom: 10px;
+                        font-size: 28px;
+                    }
+                    .product-info__description-description {
+                        grid-column: 1/3;
+                    }
+                    .product-info__order {
+                        margin: 15px 0;
+                    }
+                    .product-order__order {
+                        display: none;
+                    }
+                    .product-info__info h3, p {
+                        display: none;
+                    }
+                    .product-info__btn  {
+                        margin-top: 0;
+                    }
+                }
+
             }
         }
     }

@@ -84,24 +84,29 @@
     <main>
         <section class="catalog">
             <div class="container">
-                <div class="container">
-                    <select name="" id="">
-                        <option value="1">value 1</option>
-                        <option value="2">value 2</option>
-                        <option value="3">value 3</option>
-                        <option value="4">value 4</option>
-                        <option value="5">value 5</option>
-                    </select>
-                    <div class="div-select">
-                        <button id="div-select__btn" class="div-select__btn">selected</button>
-                        <ul id="div-select__list" class="div-select__list">
-                        </ul>
-                    </div>
-                </div>
                 <div class="catalog-inner">
                     <div class="catalog-name">
-                        <img id="catalog-name__img" class="catalog-name__img"src="./array/sets/product-icon.svg" alt="icon">
-                        <h1 id="catalog-name__heading" class="catalog-name__heading">Сеты</h1>
+                        <div class="catalog-name__info">
+                            <img id="catalog-name__img" class="catalog-name__img"src="./array/sets/product-icon.svg" alt="icon">
+                            <h1 id="catalog-name__heading" class="catalog-name__heading">Сеты</h1>
+                        </div>
+                        <div class="catalog-name__search">
+                            <select name="" id="catalog-name__search-select" class="catalog-name__search-select">
+                                <option value="1">По умолчанию</option>
+                                <option value="2">Название</option>
+                                <option value="3">Сначала дешевле</option>
+                                <option value="4">Сначала дороже</option>
+                                <option value="5">Количество кусочков</option>
+                                <option value="6">Вес</option>
+                            </select>
+                            <div id="div-select" class="div-select">
+                                <ul id="div-select__list" class="div-select__list">
+                                    <li>Сортировка</li>
+                                    <li id="div-select__list-category">По умолчанию</li>
+                                </ul>
+                            </div>
+                            <button id="div-select__btn" class="div-select__btn"></button>
+                        </div>
                     </div>
                     <div id="catalog__row" class="catalog__row">
                     </div>

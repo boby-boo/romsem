@@ -34,8 +34,10 @@ class CatalogItems {
         <img src="${card.image}" alt="product-info image">
     </div>
     <div class="product-info__description">
-        <h1>${card.title}</h1>
-        <span>${card.weight}</span>
+        <div class="product-info__description-description">
+            <h1>${card.title}</h1>
+            <span>${card.weight}</span>
+        </div>
         <div class="product-info__order">
             <span>${card.price}</span>
             <div class="product-order__order">
@@ -47,6 +49,7 @@ class CatalogItems {
         <div class="product-info__info">
             <h3>Состав</h3>
             <p>Lorem ipsum lorem ipsum</p>
+            <button class="product-info__btn primary-btn">Хочу!</button>
         </div>
     </div>
         </div>`

@@ -4,11 +4,17 @@
         background-color: #fff;
         .catalog-name {
             max-width: 965px;
-            padding: 0 10px;
             margin: 0 auto;
+            padding: 0 10px;
             @extend %tplFlex;
-            justify-content: flex-start;
-            column-gap: 20px;
+            .catalog-name__info {
+                max-width: 144px;
+                @extend %tplFlex;
+                column-gap: 20px;
+                h1 {
+                    @include font(36px, 400, 1.0, $mainColor);
+                }
+            }
             .catalog-name__img {
                 width: 40px;
                 height: 40px;
@@ -16,9 +22,63 @@
                     @extend %tplOjectFit;
                 }
             }
-            h1 {
-                // padding: 5px 0 0 53px;
-                @include font(36px, 400, 1.0, $mainColor);
+            .catalog-name__search {
+                position: relative;
+                width: 230px;
+                @extend %tplFlex;
+                column-gap: 30px;
+                button {
+                    @include font(14px, 300, 1.0, $grayColor);
+                    background: url('/src/catalog/catalog__search-icon.svg');
+                    width: 30px;
+                    height: 30px;
+                    transition: opacity .3s ease;
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+                .div-select__list {
+                    position: absolute;
+                    right: 50px;
+                    top: 0;
+                    max-width: 198px;
+                    width: 100%;
+                    padding: 0 11px;
+                    height: 0;
+                    overflow: hidden;
+                    background-color: #fff;
+                    border-radius: 15px 15px 0 0;
+                    z-index: 99;
+                    transition: all .3s ease-out;
+                    @include font (18px, 400, 1.0, $darkColor);
+                    li {
+                        margin-bottom: 20px;
+                        transition: $transitionColor;
+                        &:hover {
+                            color: $primaryColor;
+                            cursor: pointer;
+                        }
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                        &:first-child {
+                            margin-bottom: 5px;
+                            @include font (14px, 300, 1.0, $grayColor);
+                        }
+                        &:nth-child(2) {
+                            padding-bottom: 10px;
+                            border-bottom: 0.5px solid $grayColor;
+                        }
+                    }
+                    &.active {
+                        padding-top: 4px;
+                        padding-bottom: 10px;
+                        height: 290px;
+                    }
+                }
+                .catalog-name__search-select {
+                    display: none;
+                }
             }
         }
     }
@@ -32,5 +92,9 @@
         justify-content: center;
         flex-wrap: wrap;
         gap: 40px;
+    }
+    .active {
+        box-shadow: 0 0 18px 6px rgba(0, 0, 0, 0.09);
+        
     }
 }
