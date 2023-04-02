@@ -20,41 +20,34 @@ aboutRowButton.addEventListener('click', () => {
     }
 })
 
-// фільтр старт
-const selectTag = document.querySelector('select');
-const ulTag = document.querySelector('#div-select__list');
+class CatalogFilter {
+    constructor(button, listCategory, select) {
+        this.button = document.querySelector(button);
+        this.listCategory = document.querySelector(listCategory);
+        this.selectTag = document.querySelector(select);
+        this.changeVisibleList();
+        this.changeCategoryItem();
+    }
 
-document.querySelector('#div-select__btn').addEventListener('click', function() {
-    ulTag.classList.toggle('active');
-    // ulTag.style.display == 'block' ? ulTag.style.display = 'none' : ulTag.style.display = 'block';
-    // if (ulTag.classList.toggle('active')) {
-    //     console.log('none')
-    //     ulTag.style.display = 'none';
-    // } else {
-    //     ulTag.style.display = 'block';
-    //     console.log('block')
-    // }
-    
-    // console.log(ulTag.classList.toggle('active'))
-})
+    changeVisibleList() {
+        this.button.addEventListener('click', () => this.listCategory.classList.toggle('active'))
+    }
 
-for (let i = 0; i < selectTag.options.length; i++) {
-    const li = document.createElement('li');
-    li.innerHTML = selectTag.options[i].innerHTML;
-    li.addEventListener('click', () => {
-        console.log(selectTag.selectedIndex, i)
-        if (selectTag.selectedIndex == i) return;
-        selectTag.selectedIndex = i;
-        // document.querySelector('#div-select__btn').innerHTML = selectTag.value;
-        // document.querySelector('#div-select__list-category').innerHTML = selectTag.value;
-        document.querySelector('#div-select__list-category').innerHTML = selectTag[i].innerText;
-        ulTag.classList.toggle('active');
-        // ulTag.style.display == 'block' ? ulTag.style.display = 'none' : ulTag.style.display = 'block';
-    })
-    ulTag.append(li)
+    changeCategoryItem() {
+        for (let i = 0; i < this.selectTag.options.length; i++) {
+            const li = document.createElement('li');
+            li.innerHTML = this.selectTag.options[i].innerHTML;
+            li.addEventListener('click', () => {
+                if (this.selectTag.selectedIndex == i) return;
+                this.selectTag.selectedIndex = i;
+                document.querySelector('#div-select__list-category').innerHTML = this.selectTag[i].innerText;
+                this.listCategory.classList.toggle('active');
+            })
+            this.listCategory.append(li)
+        }
+    }
 }
-//фільтр енд
-
+const catalogFilter = new CatalogFilter('#div-select__btn', '#div-select__list', 'select');
 
 const setsCatalog = [
         {
