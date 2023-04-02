@@ -1,31 +1,6 @@
 
 // Прослушка на есайд і запис активного лінку для хеш
 
-
-// function test(word) {
-//     for (let i = 0; i < word.length; i++) {
-//         if (word[i] == '#') {
-//             console.log('message')
-//             return i;
-//         }
-//     }
-// }   
-// console.dir(location)
-// console.log(location.href.slice(0, test(location.href)))
-// let r = location.href.slice(0, test(location.href))
-
-// !!!!!!!!!!!ОЧень ВАЖНО 
-
-window.addEventListener('DOMContentLoaded',() => {
-    if (localStorage != undefined) {
-        let category = localStorage.getItem('activeCategory');
-        location.hash = category;
-        router.showCategory();
-        router.changeCategoryItem(category);
-    } 
-})
-// !!!!!!!!!!!ОЧень ВАЖНО 
-
 document.querySelector('#aside').addEventListener('click', (e) => {
     if (e.target.tagName != 'A') return;
     localStorage.setItem('activeCategory', e.target.dataset.category);
@@ -342,6 +317,13 @@ class Router {
     }
 
     showCategory() {
+        if (localStorage != undefined) {
+            location.hash = localStorage.getItem('activeCategory');
+            this.categoryContainer.innerHTML = `${decodeURIComponent(location.hash).substring(1)}`;
+            this.changeCategoryItem(localStorage.getItem('activeCategory'));
+            return;
+        }
+
         if (location.hash.substring(1)) {
             // this.categoryContainer.style.display = 'block';
             this.categoryContainer.innerHTML = `${decodeURIComponent(location.hash).substring(1)}`;
@@ -353,17 +335,11 @@ class Router {
     changeCategoryItem(catalog) {
         fetch(this.pathToProducts)
             .then(response => response.json())
-            .then(products => {
-                products.forEach(pr => {
-                    if (pr.category == catalog) {
-                        this.categoryIcon.src = pr.categoryImage;
-                    }
-                })
-            })
-        // products.forEach(product => {
-        //     if (product.categoryImage == undefined) return;
-        //     this.categoryIcon.src = product.categoryImage;
-        // })
+            .then(json => json.forEach(card => {
+                if(card.category == catalog) {
+                    this.categoryIcon.src = card.categoryImage;
+                }
+            }))
     }
 
     createNavigation() {
