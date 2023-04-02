@@ -886,16 +886,13 @@ body {
   background-color: #fff;
 }
 .product-info .product-info__row .product-info__card {
-  gap: 10px 30px;
+  justify-content: flex-start;
+  gap: 10px 50px;
 }
 .product-info .product-info__row .product-info__card .product-info__image {
   max-width: 620px;
   width: 100%;
   height: 435px;
-}
-.product-info .product-info__row .product-info__card .product-info__description {
-  max-width: 368px;
-  margin: 0 auto;
 }
 .product-info .product-info__row .product-info__card .product-info__description h1 {
   margin-bottom: 10px;

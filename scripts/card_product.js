@@ -71,3 +71,8 @@ class CatalogItems {
     }
 }
 const catalogItems = new CatalogItems('#product-info__row', '#product-info__btn-previous', '#product-info__btn-next');
+
+document.querySelector('#aside__row').addEventListener('click', (e) => {
+    if (e.target.tagName != 'A') return;
+    localStorage.setItem('activeCategory', e.target.dataset.category)
+})

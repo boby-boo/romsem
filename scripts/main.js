@@ -346,6 +346,7 @@ class Router {
         this.menuLinks.forEach((link) => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
+                localStorage.setItem('activeCategory', link.dataset.category)
                 location.hash = link.dataset.category;
                 this.createCards(this.data);
                 this.showCategory();
@@ -368,7 +369,7 @@ class Router {
         products.forEach(product => {        
             if ('#' + encodeURIComponent(product.category) == location.hash) {
                 this.container.innerHTML +=
-                    `<a href="card-product.html" target="_blank" class="catalog-card primary-card" data-id-card="${product.id}">
+                    `<a href="card-product.html" class="catalog-card primary-card" data-id-card="${product.id}">
                 <div class="catalog-card__img  primary-card__img">
                     <img src="${product.image}" alt="card image">
                 </div>
